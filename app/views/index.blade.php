@@ -29,7 +29,7 @@
 			<ul class="mui-table-view mui-table-view-chevron">
 				@foreach ($filmData as $val)
 					<li class="mui-table-view-cell mui-media">
-						<a class="mui-navigate-right">
+						<a class="mui-navigate-right" href="film/{{ $val->id }}">
 							<img class="mui-media-object mui-pull-left" src="{{ $val->pic_url }}">
 							<div class="mui-media-body">{{ $val->name }}<p class="mui-ellipsis">{{ $val->desc }}</p>
 							</div>
