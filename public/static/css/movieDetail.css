@@ -19,7 +19,6 @@ p {
   overflow: hidden;
 }
 .mui-content .g-center .movie-img {
-  width: 38%;
   float: left;
   margin: 10px 0 0 0;
   width: 100px;
@@ -57,44 +56,58 @@ p {
   border-bottom: 1px solid #DDDDDD;
   background: #F3F3F3;
 }
-.mui-content .mui-table-view {
-  overflow: hidden;
+.mui-content .ul-nav {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 231px;
+  z-index: 99;
+  width: 100%;
 }
-.mui-content .mui-table-view .mui-collapse {
+.mui-content .ul-nav .mui-collapse {
   float: left;
   width: 33.3%;
   border-bottom: 1px solid #c8c7cc;
   font-size: 12px;
   text-align: center;
 }
-.mui-content .mui-table-view .mui-collapse .mui-navigate-right {
+.mui-content .ul-nav .mui-collapse .mui-navigate-right {
   border-right: 1px solid #c8c7cc;
 }
-.mui-content .mui-table-view .mui-collapse .mui-collapse-content {
+.mui-content .ul-nav .mui-collapse .mui-collapse-content {
   padding: 0;
   border-right: 1px solid #c8c7cc;
 }
-.mui-content .mui-table-view .mui-collapse .mui-collapse-content .table-list {
+.mui-content .ul-nav .mui-collapse .mui-collapse-content .table-list {
   border-top: 1px solid #c8c7cc;
   padding: 5px 8px;
 }
-.mui-content .mui-table-view .mui-collapse .table-list-middle {
+.mui-content .ul-nav .mui-collapse .table-list-middle {
   border-left: 1px solid #c8c7cc;
 }
-.mui-content .mui-table-view .mui-collapse .table-list-right {
+.mui-content .ul-nav .mui-collapse .table-list-right {
   border-right: none;
   border-left: 1px solid #c8c7cc;
 }
+.mui-content .film-list {
+  margin-top: 44px;
+}
+.mui-content .film-list .mui-media-object {
+  width: 30px;
+  height: 45px;
+}
+.mui-content .film-list .mui-media-object img {
+  width: 100%;
+}
 .mui-content .film-list .mui-media-body {
-  font-size: 16px;
+  font-size: 13px;
 }
 .mui-content .film-list .mui-media-body .mui-icon-location {
-  font-size: 20px;
+  font-size: 16px;
 }
 .mui-content .film-list .mui-media-body .progress-bar {
   border-radius: 6px;
   border: 1px solid #999999;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   width: 100px;
   height: 16px;
   font-size: 10px;

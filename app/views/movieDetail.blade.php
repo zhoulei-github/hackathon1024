@@ -65,13 +65,12 @@
             <li class="mui-table-view-cell mui-media">
                 <a href="javascript:;">
                     <img class="mui-media-object mui-pull-left"
-                         style="width:"
                          src="{{{ isset($v['cinema']['pic']) ? $v['cinema']['pic'] : '/static/images/xsk.jpeg'}}}">
 
                     <div class="mui-media-body">
                         {{{ isset($v['cinema']['name']) ? $v['cinema']['name'] : '获取失败'}}}
-                        <span style="color: grey;font-size: 12px;">上映时间:{{{ $v['show_time'] }}}</span>
-                        <p class='mui-ellipsis'><span class="mui-icon mui-icon-location"></span>距离{{{ $v['cinema']['distance'] }}}m</p>
+                        <p style="color: grey;font-size: 12px;">上映时间:{{{ $v['show_time'] }}}</p>
+                        <p class='mui-ellipsis' style="font-size: 13px"><span class="mui-icon mui-icon-location"></span>距离{{{ $v['cinema']['distance'] }}}m</p>
 
                         <div class="progress-bar">
                             <span class="line-bar" id="line-bar" style="width:{{{ $v['current_people']/$v['max_people']*100 }}}px;">

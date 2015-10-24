@@ -1,6 +1,6 @@
 $(function(){
 	seatSet();
-	$('#seats').on('touchend','span',{flag:1},seatClick);
+	$('#seats').on('touchend','span',seatClick);
 })
 
 //生成座位
@@ -24,11 +24,10 @@ function seatSet(){
 }
 
 //座位点击事件
-function seatClick(e){
-	console.log(e.data)
-	if(e.data.flag==1){
+function seatClick(){
+	if($(this).hasClass('empty')){
 		$(this).removeClass('empty').addClass('on');
 	}else{
-		
+		$(this).removeClass('on').addClass('empty');
 	}
 }
