@@ -12,9 +12,13 @@
 */
 
 Route::get('/', 'HomeController@index');
+
 Route::get('/login', 'HomeController@login');
 Route::get('/reg', 'HomeController@reg');
 Route::get('/forget', 'HomeController@forget');
+Route::get('/film/{id}', 'FilmController@detail')
+    ->where('id', '\d+');
+
 
 Route::get('test', 'TestController@test');
 
