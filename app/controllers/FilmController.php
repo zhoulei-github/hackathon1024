@@ -14,10 +14,18 @@ class FilmController extends BaseController
 
         $vote = $vote->forPage(1, 20)->get();
         $voteData = $vote->toArray();
+
         foreach ($voteData as $k => $v) {
             $voteData[$k]['show_time'] = date('m/d H:i', strtotime($v['show_time']));
-            $voteData[$k]['cinema']['distance'] = $this->getDistance(119.998089, 30.38812, $v['cinema']['location_x'], $v['cinema']['location_y']);
+            $distance = $this->getDistance(119.998089, 30.38812, $v['cinema']['location_x'], $v['cinema']['location_y']);
+            $voteData[$k]['cinema']['distance'] = $distance;
+            $voteData[$k]['cinema']['distance_str'] = $distance > 1000 ? round($distance / 1000, 2) . ' km' : $distance .'m';
         }
+
+        usort($voteData, function ($a, $b) {
+            return $a['cinema']['distance'] < $b['cinema']['distance'] ? -1 : 1;
+        });
+
         return View::make('movieDetail', ['film' => $film, 'list' => $voteData]);
     }
 

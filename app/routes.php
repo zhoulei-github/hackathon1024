@@ -17,6 +17,7 @@ Route::get('/login', 'HomeController@login');
 Route::get('/reg', 'HomeController@reg');
 Route::get('/forget', 'HomeController@forget');
 Route::get('/select', 'VoteController@select');
+Route::get('/orders', 'UserController@orders');
 Route::get('/film/{id}', 'FilmController@detail')
     ->where('id', '\d+');
 

@@ -70,7 +70,7 @@
                     <div class="mui-media-body">
                         {{{ isset($v['cinema']['name']) ? $v['cinema']['name'] : '获取失败'}}}
                         <p style="color: grey;font-size: 12px;">上映时间:{{{ $v['show_time'] }}}</p>
-                        <p class='mui-ellipsis' style="font-size: 13px"><span class="mui-icon mui-icon-location"></span>距离{{{ $v['cinema']['distance'] }}}m</p>
+                        <p class='mui-ellipsis' style="font-size: 13px"><span class="mui-icon mui-icon-location"></span>距离{{{ $v['cinema']['distance_str'] }}}</p>
 
                         <div class="progress-bar">
                             <span class="line-bar" id="line-bar" style="width:{{{ $v['current_people']/$v['max_people']*100 }}}px;">

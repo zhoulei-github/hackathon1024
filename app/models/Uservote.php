@@ -19,4 +19,8 @@ class Uservote extends Eloquent
         return $this->belongsTo('film');
     }
 
+    public function vote(){
+        return $this->belongsTo('vote');
+    }
+
 }
