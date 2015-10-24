@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('test', 'TestController@test');
+
+Route::any('api/{path}', 'ApiDispacherController@dispatch')
+    ->where('path', '[a-z0-9\/]*');
