@@ -31,8 +31,9 @@ class ApiFilmController extends ApiBaseController
             return $this->json([]);
         }
 
+        $defaultColumn = ['id', 'name', 'description', 'pic_url'];
         $listData = $film->forPage($page, $pageSize)
-            ->get()
+            ->get($defaultColumn)
             ->toArray();
 
         $listData = [
