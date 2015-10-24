@@ -1,9 +1,6 @@
 <?php
 
-use \Illuminate\Http\Response;
-use \Illuminate\Support\Facades\Input;
-
-class ApiFilmController extends BaseController
+class ApiFilmController extends ApiBaseController
 {
     public function pageList()
     {
@@ -11,16 +8,26 @@ class ApiFilmController extends BaseController
         $page = Input::get('page', 1);
         $pageSize = Input::get('page_size', 20);
 
-        $film = Film::where(1);
+        $film = Film::where('id', '>', 0);
 
         if ($name) {
             $film = $film->where('name', 'like', "%{$name}%");
         }
 
-        $film = $film->forPage($page, $pageSize);
+        $count = $film->count();
+        if (!$count) {
+            return $this->json([]);
+        }
 
-        $filmData = $film->toArray();
+        $listData = $film->forPage($page, $pageSize)
+            ->get()
+            ->toArray();
 
-        return Response::json($filmData);
+        $listData = [
+            'count' => $count,
+            'list' => $listData,
+        ];
+
+        return $this->json($listData);
     }
 }
