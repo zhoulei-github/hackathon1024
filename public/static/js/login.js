@@ -9,5 +9,5 @@ $(function() {
 })
 
 function do_login (e) {
-	window.location.href = "./index";
+	window.location.href = "/";
 }
