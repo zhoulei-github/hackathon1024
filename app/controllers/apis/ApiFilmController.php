@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Arr;
+
 class ApiFilmController extends ApiBaseController
 {
     public function get()
@@ -31,7 +33,7 @@ class ApiFilmController extends ApiBaseController
             return $this->json([]);
         }
 
-        $defaultColumn = ['id', 'name', 'description', 'pic_url'];
+        $defaultColumn = ['id', 'name', 'desc', 'pic_url'];
         $listData = $film->forPage($page, $pageSize)
             ->get($defaultColumn)
             ->toArray();
