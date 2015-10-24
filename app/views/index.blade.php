@@ -8,6 +8,9 @@
 		<link href="/static/css/mui.min.css" rel="stylesheet" />
 
 		<style>
+			.mui-input-row.mui-search.mui-active:before{
+				margin-top: -10px;
+			}
 			ul {
 				font-size: 14px;
 				color: #8f8f94;
