@@ -1,4 +1,4 @@
-login.html<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +12,8 @@ login.html<?php
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/film/{id}', 'FilmController@detail')
+    ->where('id', '\d+');
 
 Route::get('test', 'TestController@test');
 
