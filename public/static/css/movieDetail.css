@@ -1,0 +1,121 @@
+body {
+  background: #FFFFFF;
+}
+p {
+  margin-bottom: 0;
+}
+.mui-content .ul-nav .mui-table-view-cell:after,
+.ul-nav:after {
+  height: 0;
+}
+.mui-content {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+}
+.mui-content .g-center {
+  width: 92%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mui-content .g-center .movie-img {
+  width: 38%;
+  float: left;
+  margin: 10px 0 0 0;
+  width: 100px;
+  height: 150px;
+}
+.mui-content .g-center .movie-img img {
+  width: 100%;
+}
+.mui-content .g-center .movie-detail {
+  width: 58%;
+  float: left;
+  margin: 10px 10px 0 10px;
+}
+.mui-content .g-center .movie-detail p {
+  margin: 3px 0;
+  font-size: 13px;
+}
+.mui-content .g-center .movie-detail .film-title {
+  font-size: 14px;
+  color: #000000;
+}
+.mui-content .g-center .movie-detail .mark {
+  color: #EC9524;
+  font-size: 18px;
+}
+.mui-content .g-center .movie-detail .actors {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mui-content .g-border {
+  width: 100%;
+  height: 10px;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  background: #F3F3F3;
+}
+.mui-content .mui-table-view {
+  overflow: hidden;
+}
+.mui-content .mui-table-view .mui-collapse {
+  float: left;
+  width: 33.3%;
+  border-bottom: 1px solid #c8c7cc;
+  font-size: 12px;
+  text-align: center;
+}
+.mui-content .mui-table-view .mui-collapse .mui-navigate-right {
+  border-right: 1px solid #c8c7cc;
+}
+.mui-content .mui-table-view .mui-collapse .mui-collapse-content {
+  padding: 0;
+  border-right: 1px solid #c8c7cc;
+}
+.mui-content .mui-table-view .mui-collapse .mui-collapse-content .table-list {
+  border-top: 1px solid #c8c7cc;
+  padding: 5px 8px;
+}
+.mui-content .mui-table-view .mui-collapse .table-list-middle {
+  border-left: 1px solid #c8c7cc;
+}
+.mui-content .mui-table-view .mui-collapse .table-list-right {
+  border-right: none;
+  border-left: 1px solid #c8c7cc;
+}
+.mui-content .film-list .mui-media-body {
+  font-size: 16px;
+}
+.mui-content .film-list .mui-media-body .mui-icon-location {
+  font-size: 20px;
+}
+.mui-content .film-list .mui-media-body .progress-bar {
+  border-radius: 6px;
+  border: 1px solid #999999;
+  margin: 10px 0 0 0;
+  width: 100px;
+  height: 16px;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  overflow: hidden;
+}
+.mui-content .film-list .mui-media-body .progress-bar .line-bar {
+  border-radius: 5px;
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: #F91313;
+  color: #FFFFFF;
+}
+.mui-content .film-list .like-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.mui-content .film-list .like-btn img {
+  width: 100%;
+  vertical-align: bottom;
+}
