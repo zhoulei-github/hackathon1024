@@ -13,4 +13,9 @@ class Vote extends Eloquent
      * @var string
      */
     protected $table = 'votes';
+
+    public function cinema()
+    {
+        return $this->belongsTo('cinema');
+    }
 }

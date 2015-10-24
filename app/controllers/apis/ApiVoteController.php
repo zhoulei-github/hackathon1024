@@ -15,20 +15,24 @@ class ApiVoteController extends ApiBaseController
         $page = Input::get('page', 1);
         $pageSize = Input::get('page_size', 20);
 
-        $vote = Vote::where('id', '>', 0);
+        $vote = Vote::with('cinema');
 
-        if ($filmId) {
-            $vote = $vote->where('id', '=', "{$filmId}");
-        }
+        $vote = $vote->where('film_id', '=', "{$filmId}");
+        $vote = $vote->where('status', '=', 0);
 
         $vote = $vote->forPage($page, $pageSize)->get();
 
+        $voteData = $vote->toArray();
 
-        $voteData = [
-            'list' => $vote->toArray(),
+        foreach($voteData as $k=>$v) {
+            $voteData[$k]['cinema']['distance'] = rand(100, 2000);
+        }
+
+        $rt = [
+            'list' => $voteData,
             'count' => $vote->count()
         ];
 
-        return $this->json($voteData);
+        return $this->json($rt);
     }
 }
