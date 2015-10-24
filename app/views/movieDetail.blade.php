@@ -33,8 +33,6 @@
             <p class="addr" id="film-country">地区/国家：{{{ $film['country'] }}}</p>
         </div>
     </div>
-    <div class="g-border">
-    </div>
     <ul class="mui-table-view ul-nav">
         <li class="mui-table-view-cell mui-collapse">
             <a class="mui-navigate-right" href="#">地区选择</a>

@@ -59,7 +59,7 @@ p {
 .mui-content .ul-nav {
   background: rgba(0, 0, 0, 0);
   position: absolute;
-  top: 213px;
+  top: 220px;
   z-index: 99;
   width: 100%;
 }
@@ -89,7 +89,7 @@ p {
   border-left: 1px solid #c8c7cc;
 }
 .mui-content .film-list {
-  margin-top: 44px;
+  margin-top: 50px;
 }
 .mui-content .film-list .mui-media-object {
   width: 30px;

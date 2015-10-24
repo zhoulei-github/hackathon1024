@@ -41,7 +41,9 @@
 					<li class="mui-table-view-cell mui-media">
 						<a class="mui-navigate-right" href="film/{{ $val->id }}">
 							<img class="mui-media-object mui-pull-left" src="{{ $val->pic_url }}">
-							<div class="mui-media-body">{{ $val->name }}<p class="mui-ellipsis">{{ $val->desc }}</p>
+							<div class="mui-media-body">
+								<p style="font-weight: 400;color: #000;font-size: 15px;">{{ $val->name }}</p>
+								<p style="font-size: 12px;" class="mui-ellipsis">{{ $val->desc }}</p>
 							</div>
 						</a>
 					</li>
