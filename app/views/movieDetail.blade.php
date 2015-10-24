@@ -57,12 +57,12 @@
 						<img class="mui-media-object mui-pull-left" src="{{{ isset($v['cinema']['pic']) ? $v['cinema']['pic'] : '/static/images/xsk.jpeg'}}}">
 						<div class="mui-media-body">
 							{{{ isset($v['cinema']['name']) ? $v['cinema']['name'] : '获取失败'}}}
-							<p class='mui-ellipsis'><span class="mui-icon mui-icon-location"></span>距离300m</p>
+							<p class='mui-ellipsis'><span class="mui-icon mui-icon-location"></span>距离{{{ $v['cinema']['distance'] }}}m</p>
 							<div class="progress-bar">
 								<span class="line-bar" id="line-bar" style="width:{{{ $v['current_people']/$v['max_people']*100 }}}px;">{{{ round($v['current_people']/$v['max_people']*100) }}}%</span>
 							</div>
 						</div>
-						<a class="mui-btn"><span class="like-btn"><img src="/static/images/like.png"></span>想看</a>
+						<a class="mui-btn" href="/select?vote_id={{{ $v['id'] }}}"><span class="like-btn"><img src="/static/images/like.png"></span>想看</a>
 					</a>
 				</li>
 			@endforeach

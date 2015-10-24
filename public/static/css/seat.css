@@ -1,0 +1,74 @@
+body {
+  background: #FFFFFF;
+}
+.mui-content {
+  background: #FFFFFF;
+}
+.mui-content .stage {
+  width: 90%;
+  height: 20px;
+  margin: 20px auto;
+  background: #999999;
+  color: #FFFFFF;
+  text-align: center;
+}
+.mui-content .seats {
+  margin: 10px auto;
+}
+.mui-content .seats .seat-ul {
+  list-style: none;
+  display: inline;
+}
+.mui-content .seats .seat-ul li {
+  width: 96%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mui-content .seats .seat-ul li p {
+  float: left;
+  width: 20px;
+  text-align: center;
+}
+.mui-content .seats .seat-ul li .seat-box {
+  display: table;
+  margin: 0 auto;
+}
+.mui-content .seats .seat-ul li .seat-box span.empty {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  display: block;
+  float: left;
+  border: 1px solid #C8C7CC;
+  border-radius: 3px;
+}
+.mui-content .seats .seat-ul li .seat-box span.on {
+  background: #C8C7CC;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  display: block;
+  float: left;
+  border: 1px solid #C8C7CC;
+  border-radius: 3px;
+}
+.mui-content .seats .seat-ul li .seat-box span.male {
+  background: blue;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  display: block;
+  float: left;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+.mui-content .seats .seat-ul li .seat-box span.female {
+  background: red;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  display: block;
+  float: left;
+  border: 1px solid red;
+  border-radius: 3px;
+}
