@@ -78,7 +78,7 @@
                             </span>
                         </div>
                     </div>
-                    <a class="mui-btn" href="/select?"><span class="like-btn"><img src="/static/images/like.png"></span>想看</a>
+                    <a class="mui-btn" href="/select?vote_id={{{ $v['id'] }}}"><span class="like-btn"><img src="/static/images/like.png"></span>想看</a>
                 </a>
             </li>
         @endforeach
