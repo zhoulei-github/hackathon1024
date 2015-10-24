@@ -16,7 +16,7 @@ $(function(){
         },function(res){
         	if (res.msg == "network error") {
         		alert('支付成功');
-        		window.location.href = "/";
+        		window.location.href = "/orders";
         	};
         });
     });
