@@ -4,13 +4,19 @@ class HomeController extends BaseController
 {
     public function index()
     {
+    	$name = Input::get('name', '');
+
     	$film = Film::where('id', '>', 0);
+
+    	if ($name) {
+            $film = $film->where('name', 'like', "%{$name}%");
+        }
 
         $defaultColumn = ['id', 'name', 'desc', 'pic_url'];
         $filmData = $film->forPage(1, 10)
 			             ->get($defaultColumn);
 
-        return View::make('index', array('filmData' => $filmData));
+        return View::make('index', array('filmData' => $filmData, 'name' => $name));
     }
 
     public function login()
