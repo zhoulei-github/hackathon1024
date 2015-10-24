@@ -27,7 +27,8 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">搜索结果</h1>
 			@else
-			<h1 class="mui-title">选择电影</h1>
+				<h1 class="mui-title">选择电影</h1>
+				<a class="mui-pull-right" style="padding-top:11px;font-size: 14px;" href="/orders">我的</a>
 			@endif
 		</header>
 		<div class="mui-content">

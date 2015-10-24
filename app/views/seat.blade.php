@@ -30,8 +30,10 @@
 		<div style="text-align: center;">
 			<button type="button" class="mui-btn mui-btn-primary" style="width:150px;" id="sub-account">提 交 订 单</button>
 		</div>
-		
-	<script src="/static/js/jquery-1.11.3.min.js"></script>
+	<script>
+		var voteid = {{{ $voteinfo['id'] }}};
+	</script>
+	<script src="/static/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="https://one.pingxx.com/lib/pingpp_one.js"></script>
 	<script type="text/javascript" src="/static/js/seat.js" ></script>
 </body>

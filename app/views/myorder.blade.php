@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav">
-		<a class="mui-icon mui-icon-left-nav mui-pull-left" style="font-size: 16px;padding-top: 15px;" href="/">首页</a>
+		<a class="mui-icon mui-icon-left-nav mui-pull-left" style="font-size: 14px; font-weight:normal; padding-top: 15px;" href="/">首页</a>
 		<h1 class="mui-title">我的订单</h1>
 	</header>
 	<div class="mui-content">

@@ -10,7 +10,7 @@
 </head>
 <body>
 <header class="mui-bar mui-bar-nav">
-    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="history.back();"></a>
 
     <h1 class="mui-title">电影详情</h1>
 </header>
@@ -62,7 +62,7 @@
         @foreach ($list as $v)
             <li class="mui-table-view-cell mui-media">
                 <a href="javascript:;">
-                    <img class="mui-media-object mui-pull-left"
+                    <img class="mui-media-object mui-pull-left" style="width:30px;height:30px;"
                          src="{{{ isset($v['cinema']['pic']) ? $v['cinema']['pic'] : '/static/images/xsk.jpeg'}}}">
 
                     <div class="mui-media-body">
