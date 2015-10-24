@@ -18,5 +18,5 @@ Route::get('/', function()
 
 Route::get('test', 'TestController@test');
 
-Route::any('api/{path}', 'ApiDispacherController@dispatch')
+Route::any('api/{path}', 'ApiDispatcherController@dispatch')
     ->where('path', '[a-z0-9\/]*');
