@@ -4,6 +4,43 @@ body {
 .mui-content {
   background: #FFFFFF;
 }
+.mui-content .film-top {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mui-content .film-top .film-txt {
+  float: left;
+  width: 200px;
+}
+.mui-content .film-top .film-txt .flim-name {
+  font-size: 20px;
+  color: #000000;
+  margin: 20px 0 0 0;
+}
+.mui-content .film-top .film-txt .flim-addr {
+  font-size: 13px;
+  color: #999999;
+  margin: 5px 0 0 0;
+}
+.mui-content .film-top .film-txt .film-date {
+  font-size: 13px;
+  color: #999999;
+  margin: 0 0 0 0;
+}
+.mui-content .film-top .film-btn {
+  display: block;
+  float: right;
+  width: 60px;
+  height: 30px;
+  border-radius: 3px;
+  background: green;
+  color: #FFFFFF;
+  margin: 55px 0 0 0;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+}
 .mui-content .stage {
   width: 90%;
   height: 20px;

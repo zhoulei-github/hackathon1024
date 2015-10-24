@@ -18,4 +18,9 @@ class Vote extends Eloquent
     {
         return $this->belongsTo('cinema');
     }
+
+    public function film()
+    {
+        return $this->belongsTo('film');
+    }
 }

@@ -7,14 +7,12 @@ $(function(){
 function seatSet(){
 	var seatHTML = '';
 	seatHTML += '<ul class="seat-ul">';
-	for(var i=0;i<10;i++){
+	for(var i=0;i<6;i++){
 		seatHTML += '<li>';
 		seatHTML += '<p>'+ (i+1) +'</p>';
 		seatHTML += '<div class="seat-box">';
-		for(var j=0;j<(i+5);j++){
-			if(j<10){
+		for(var j=0;j<10;j++){
 				seatHTML += '<span class="empty"></span>';
-			}
 		}
 		
 		seatHTML += '</div>';

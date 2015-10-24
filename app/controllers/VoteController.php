@@ -7,10 +7,10 @@ class VoteController extends BaseController
     {
         $uid = 1;
         $voteId = Input::get('vote_id', 3);
-        $vote =  Vote::with('cinema');
+        $vote =  Vote::with('cinema')->with('film');
         $voteInfo = $vote->find($voteId)->toArray();
 
-        return View::make('seat');
+        return View::make('seat', ['voteinfo' => $voteInfo]);
     }
 
 }
