@@ -18,6 +18,7 @@ class ApiDispatcherController extends BaseController
 
         $method = array_pop($paths);
         $controller = array_pop($paths);
+        $controller = ucfirst($controller);
         $controller = "Api{$controller}Controller";
 
         $controller = new $controller;

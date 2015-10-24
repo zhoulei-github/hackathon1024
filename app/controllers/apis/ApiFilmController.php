@@ -3,8 +3,7 @@
 class ApiFilmController extends BaseController
 {
 
-
-    public function showWelcome()
+    public function test()
     {
         return View::make('hello');
     }
