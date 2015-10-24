@@ -1,4 +1,4 @@
-login.html<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +12,9 @@ login.html<?php
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/login', 'HomeController@login');
+Route::get('/reg', 'HomeController@reg');
+Route::get('/forget', 'HomeController@forget');
 
 Route::get('test', 'TestController@test');
 
