@@ -19,4 +19,15 @@ class ApiBaseController extends BaseController
 
         return Response::json($data);
     }
+
+    public function jsonError($code = 400, $message = '')
+    {
+        $data = [
+            'code' => $code,
+            'message' => $message,
+            'data' => null,
+        ];
+
+        return Response::json($data);
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-class ApiFilmController extends ApiBaseController
+class ApiCinemaController extends ApiBaseController
 {
     public function get()
     {
@@ -10,7 +10,11 @@ class ApiFilmController extends ApiBaseController
             return $this->jsonError(400, 'ID无效');
         }
 
-        $film = Film::find($id);
+        $film = Cinema::find($id);
+        if (!$film) {
+            return $this->jsonError(404, '影院未找到');
+        }
+
         return $this->json($film->toArray());
     }
 
@@ -20,18 +24,18 @@ class ApiFilmController extends ApiBaseController
         $page = Input::get('page', 1);
         $pageSize = Input::get('page_size', 20);
 
-        $film = Film::where('id', '>', 0);
+        $cinema = Cinema::where('id', '>', 0);
 
         if ($name) {
-            $film = $film->where('name', 'like', "%{$name}%");
+            $cinema = $cinema->where('name', 'like', "%{$name}%");
         }
 
-        $count = $film->count();
+        $count = $cinema->count();
         if (!$count) {
             return $this->json([]);
         }
 
-        $listData = $film->forPage($page, $pageSize)
+        $listData = $cinema->forPage($page, $pageSize)
             ->get()
             ->toArray();
 
