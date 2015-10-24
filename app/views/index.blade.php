@@ -20,13 +20,20 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
+			@if ($name)
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">搜索结果</h1>
+			@else
 			<h1 class="mui-title">选择电影</h1>
+			@endif
 		</header>
 		<div class="mui-content">
+			@if (!$name)
 			<div class="mui-input-row mui-search">
 				<input type="search" class="mui-input-clear" placeholder="搜索电影" id="input-search" style="margin-bottom:0px;">
 			</div>
-			<ul class="mui-table-view mui-table-view-chevron">
+			@endif
+			<ul class="mui-table-view mui-table-view-chevron" style="margin-top:0px;">
 				@foreach ($filmData as $val)
 					<li class="mui-table-view-cell mui-media">
 						<a class="mui-navigate-right" href="film/{{ $val->id }}">
