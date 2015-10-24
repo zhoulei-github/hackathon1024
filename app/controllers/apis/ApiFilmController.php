@@ -2,6 +2,18 @@
 
 class ApiFilmController extends ApiBaseController
 {
+    public function get()
+    {
+        $id = Input::get('id', 0);
+
+        if (!$id) {
+            return $this->jsonError(400, 'ID无效');
+        }
+
+        $film = Film::find($id);
+        return $this->json($film->toArray());
+    }
+
     public function pageList()
     {
         $name = Input::get('name', '');
