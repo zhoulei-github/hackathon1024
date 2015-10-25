@@ -36,6 +36,7 @@
 		var voteid = {{{ $voteinfo['id'] }}};
 		var price = {{{ $voteinfo['price'] }}};
 		var totalprice = 0;
+		var vote_count = 0;
 	</script>
 	<script src="/static/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="https://one.pingxx.com/lib/pingpp_one.js"></script>

@@ -17,7 +17,7 @@ $(function () {
             charge_url: '/api/user/vote',
             charge_param: {
                 vote_id : voteid,
-                vote_count : 1
+                vote_count : vote_count
             },                      //(可选，用户自定义参数，若存在自定义参数则壹收款会通过 POST 方法透传给 charge_url)
             open_id: 'Openid'                       //(可选，使用微信公众号支付时必须传入)
         }, function (res) {
@@ -52,10 +52,12 @@ function seatClick() {
     if ($(this).hasClass('empty')) {
         $(this).removeClass('empty').addClass('on');
         totalprice += price;
+        vote_count ++;
         $("#price").html(totalprice + '￥');
     } else {
         $(this).removeClass('on').addClass('empty');
         totalprice -= price;
+        vote_count --;
         $("#price").html(totalprice + '￥');
     }
 }
