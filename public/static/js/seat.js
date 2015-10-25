@@ -3,6 +3,10 @@ $(function () {
     $('#seats').on('touchend', 'span', seatClick);
     //模拟支付
     $('#sub-account').on('touchend', function () {
+        if(totalprice<1) {
+            alert('请选择座位');
+            return false;
+        }
         pingpp_one.init({
             app_id: 'app_0WnDiPXjj1aHSGGO',
             order_no: 'TEST' + Math.round(new Date().getTime() / 1000),
@@ -47,7 +51,11 @@ function seatSet() {
 function seatClick() {
     if ($(this).hasClass('empty')) {
         $(this).removeClass('empty').addClass('on');
+        totalprice += price;
+        $("#price").html(totalprice + '￥');
     } else {
         $(this).removeClass('on').addClass('empty');
+        totalprice -= price;
+        $("#price").html(totalprice + '￥');
     }
 }

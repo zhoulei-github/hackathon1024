@@ -24,11 +24,11 @@
 
             <p class="mark" id="film-score">{{{ $film['score'] }}}分</p>
 
-            <p class="author" id="film-director">导演：{{{ $film['director'] }}}</p>
+            <p class="author mui-ellipsis" id="film-director">导演：{{{ $film['director'] }}}</p>
 
-            <p class="actors" id="film-actor">主演：{{{ $film['actor'] }}}</p>
+            <p class="actors mui-ellipsis" id="film-actor">主演：{{{ $film['actor'] }}}</p>
 
-            <p class="category" id="film-type">类别：{{{ $film['type'] }}}</p>
+            <p class="category mui-ellipsis" id="film-type">类别：{{{ $film['type'] }}}</p>
 
             <p class="addr" id="film-country">地区/国家：{{{ $film['country'] }}}</p>
         </div>

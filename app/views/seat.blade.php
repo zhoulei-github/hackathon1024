@@ -19,6 +19,7 @@
 					<p class="flim-name">{{{ $voteinfo['film']['name'] }}}</p>
 					<p class="flim-addr">上映影院：{{{ $voteinfo['cinema']['name'] }}}</p>
 					<p class="film-date">上映时间：{{{ $voteinfo['show_time'] }}}</p>
+					<p class="film-date">票价/人：{{{ $voteinfo['price'] }}}￥</p>
 					<p class="film-date">上映条件：满{{{ $voteinfo['min_people'] }}}人上映</p>
 					<p class="film-date">影院地址：{{{ $voteinfo['cinema']['address'] }}}</p>
 				</div>
@@ -27,11 +28,14 @@
 			<div class="seats" id="seats">
 			</div>
 		</div>
+		<p style="margin:-20px 0 10px 10px;">金额：<span id="price" style="font-size: 16px;color:orange;">---</span></p>
 		<div style="text-align: center;">
 			<button type="button" class="mui-btn mui-btn-primary" style="width:150px;" id="sub-account">提 交 订 单</button>
 		</div>
 	<script>
 		var voteid = {{{ $voteinfo['id'] }}};
+		var price = {{{ $voteinfo['price'] }}};
+		var totalprice = 0;
 	</script>
 	<script src="/static/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="https://one.pingxx.com/lib/pingpp_one.js"></script>
