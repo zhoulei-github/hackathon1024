@@ -62,7 +62,7 @@
         @foreach ($list as $v)
             <li class="mui-table-view-cell mui-media">
                 <a href="javascript:;">
-                    <img class="mui-media-object mui-pull-left" style="width:30px;height:30px;"
+                    <img class="mui-media-object mui-pull-left"
                          src="{{{ isset($v['cinema']['pic']) ? $v['cinema']['pic'] : '/static/images/xsk.jpeg'}}}">
 
                     <div class="mui-media-body">
@@ -72,9 +72,14 @@
 
                         <div class="progress-bar">
                             <span class="line-bar" id="line-bar" style="width:{{{ $v['current_people']/$v['max_people']*100 }}}px;">
-                                {{{ $v['current_people'] }}} / {{{ $v['max_people'] }}}
                             </span>
                         </div>
+
+                            <div class="progress-num">
+                                {{{ $v['current_people'] }}} / {{{ $v['max_people'] }}}
+                            </div>
+
+                        <p class="film-price">￥{{{ $v['price'] }}}</p>
                     </div>
                     <a class="mui-btn" href="/select?vote_id={{{ $v['id'] }}}"><span class="like-btn"><img src="/static/images/like.png"></span>想看</a>
                 </a>
