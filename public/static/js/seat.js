@@ -1,15 +1,31 @@
 $(function () {
     seatSet();
     $('#seats').on('touchend', 'span', seatClick);
+    for(var i = 0;i<6;i ++){
 
+        $('.seat-box').eq(0).find('span').eq(i+2).removeClass('empty').addClass('female').addClass('hold');
+        $('.seat-box').eq(1).find('span').eq(i).removeClass('empty').addClass('female').addClass('hold');
+    }
+
+
+    $('.seat-box').eq(0).find('span').eq(2).removeClass('female').addClass('male').addClass('hold');
+    $('.seat-box').eq(1).find('span').eq(1).removeClass('female').addClass('male').addClass('hold');
+    $('.seat-box').eq(0).find('span').eq(5).removeClass('female').addClass('male').addClass('hold');
+    $('.seat-box').eq(1).find('span').eq(4).removeClass('female').addClass('male').addClass('hold');
+    $('.seat-box').eq(2).find('span').eq(4).removeClass('empty').addClass('female').addClass('hold');
     $('.seat-box').eq(3).find('span').eq(5).removeClass('empty').addClass('male').addClass('hold');
     $('.seat-box').eq(3).find('span').eq(6).removeClass('empty').addClass('female').addClass('hold');
     $('.seat-box').eq(4).find('span').eq(3).removeClass('empty').addClass('male').addClass('hold');
     $('.seat-box').eq(4).find('span').eq(4).removeClass('empty').addClass('male').addClass('hold');
-    $('.seat-box').eq(4).find('span').eq(5).removeClass('empty').addClass('male').addClass('hold');
-    $('.seat-box').eq(4).find('span').eq(6).removeClass('empty').addClass('male').addClass('hold');
+    $('.seat-box').eq(4).find('span').removeClass('empty').addClass('male').addClass('hold');
+    $('.seat-box').eq(4).find('span').eq(6).removeClass('empty').addClass('female').addClass('hold');
+    $('.seat-box').eq(4).find('span').eq(1).removeClass('empty').addClass('female').addClass('hold');
+    $('.seat-box').eq(4).find('span').eq(4).removeClass('empty').addClass('female').addClass('hold');
+    $('.seat-box').eq(5).find('span').removeClass('empty').addClass('male').addClass('hold');
     $('.seat-box').eq(5).find('span').eq(2).removeClass('empty').addClass('female').addClass('hold');
     $('.seat-box').eq(5).find('span').eq(3).removeClass('empty').addClass('female').addClass('hold');
+    $('.seat-box').eq(5).find('span').eq(5).removeClass('empty').addClass('female').addClass('hold');
+    $('.seat-box').eq(5).find('span').eq(9).removeClass('empty').addClass('female').addClass('hold');
     //模拟支付
     $('#sub-account').on('touchend', function () {
         if(totalprice<1) {

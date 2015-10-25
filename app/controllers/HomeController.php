@@ -34,4 +34,9 @@ class HomeController extends BaseController
         return View::make('forget_password');
     }
 
+    public function startup()
+    {
+        return View::make('startup');
+    }
+
 }

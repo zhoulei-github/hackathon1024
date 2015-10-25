@@ -15,6 +15,7 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/login', 'HomeController@login');
 Route::get('/reg', 'HomeController@reg');
+Route::get('/startup', 'HomeController@startup');
 Route::get('/forget', 'HomeController@forget');
 Route::get('/select', 'VoteController@select');
 Route::get('/orders', 'UserController@orders');

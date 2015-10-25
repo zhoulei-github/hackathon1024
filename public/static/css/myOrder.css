@@ -19,6 +19,14 @@
   font-size: 13px;
   margin: 10px 0 0 0;
 }
+.mui-content .mui-table-view-cell .order-txt .film-detail {
+  font-size: 11px;
+  display: inline-block;
+  padding: 2px 3px;
+  background: green;
+  color:#ffffff;
+  border-radius: 3px;
+}
 .mui-content .mui-table-view-cell .order-txt .order-date {
   font-size: 12px;
 }

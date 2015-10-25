@@ -71,12 +71,12 @@
                         <p class='mui-ellipsis' style="font-size: 13px"><span class="mui-icon mui-icon-location"></span>距离{{{ $v['cinema']['distance_str'] }}}</p>
 
                         <div class="progress-bar">
-                            <span class="line-bar" id="line-bar" style="width:{{{ $v['current_people']/$v['max_people']*100 }}}px;">
+                            <span class="line-bar" id="line-bar" style="width:{{{ $v['current_people']/$v['min_people']*100 }}}px;">
                             </span>
                         </div>
 
                             <div class="progress-num">
-                                {{{ $v['current_people'] }}} / {{{ $v['max_people'] }}}
+                                {{{ $v['current_people'] }}} / {{{ $v['min_people'] }}}
                             </div>
 
                         <p class="film-price">￥{{{ $v['price'] }}}</p>
