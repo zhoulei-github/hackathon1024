@@ -11,7 +11,6 @@ body {
 }
 .mui-content .film-top .film-txt {
   float: left;
-  width: 200px;
 }
 .mui-content .film-top .film-txt .flim-name {
   font-size: 20px;
@@ -108,4 +107,11 @@ body {
   float: left;
   border: 1px solid red;
   border-radius: 3px;
+}
+.price-box{
+  float: right;
+  margin:-20px 35px 0 0;
+}
+.sub-btn{
+  margin:20px auto;
 }

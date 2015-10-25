@@ -28,8 +28,8 @@
 			<div class="seats" id="seats">
 			</div>
 		</div>
-		<p style="margin:-20px 0 10px 10px;">金额：<span id="price" style="font-size: 16px;color:orange;">---</span></p>
-		<div style="text-align: center;">
+		<p class="price-box">金额：<span id="price" style="font-size: 16px;color:orange;">---</span></p>
+		<div style="text-align: center;" class="sub-btn">
 			<button type="button" class="mui-btn mui-btn-primary" style="width:150px;" id="sub-account">提 交 订 单</button>
 		</div>
 	<script>

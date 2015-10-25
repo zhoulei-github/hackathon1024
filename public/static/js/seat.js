@@ -1,6 +1,15 @@
 $(function () {
     seatSet();
     $('#seats').on('touchend', 'span', seatClick);
+
+    $('.seat-box').eq(3).find('span').eq(5).removeClass('empty').addClass('male').addClass('hold');
+    $('.seat-box').eq(3).find('span').eq(6).removeClass('empty').addClass('female').addClass('hold');
+    $('.seat-box').eq(4).find('span').eq(3).removeClass('empty').addClass('male').addClass('hold');
+    $('.seat-box').eq(4).find('span').eq(4).removeClass('empty').addClass('male').addClass('hold');
+    $('.seat-box').eq(4).find('span').eq(5).removeClass('empty').addClass('male').addClass('hold');
+    $('.seat-box').eq(4).find('span').eq(6).removeClass('empty').addClass('male').addClass('hold');
+    $('.seat-box').eq(5).find('span').eq(2).removeClass('empty').addClass('female').addClass('hold');
+    $('.seat-box').eq(5).find('span').eq(3).removeClass('empty').addClass('female').addClass('hold');
     //模拟支付
     $('#sub-account').on('touchend', function () {
         if(totalprice<1) {
@@ -45,19 +54,23 @@ function seatSet() {
     seatHTML += '</ul>';
 
     $('#seats').html(seatHTML);
+
 }
 
 //座位点击事件
 function seatClick() {
+    if($(this).hasClass('hold')){
+        return false;
+    }
     if ($(this).hasClass('empty')) {
         $(this).removeClass('empty').addClass('on');
         totalprice += price;
         vote_count ++;
-        $("#price").html(totalprice + '￥');
+        $("#price").html('￥' + totalprice);
     } else {
-        $(this).removeClass('on').addClass('empty');
+        $(this).removeClass('male').addClass('empty');
         totalprice -= price;
         vote_count --;
-        $("#price").html(totalprice + '￥');
+        $("#price").html('￥' + totalprice);
     }
 }
