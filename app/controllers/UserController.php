@@ -7,7 +7,7 @@ class UserController extends BaseController
     {
         $uid = Input::get('uid', 1);
 
-        $uservote = Uservote::with('film')->with('vote')->with('cinema')->where('user_id', '=', $uid);
+        $uservote = Uservote::with('film')->with('vote')->with('cinema')->where('user_id', '=', $uid)->orderBy('id', 'desc');
 
         $list = $uservote->forPage(1, 20)->get()->toArray();
 
