@@ -84,7 +84,7 @@ function seatClick() {
         vote_count ++;
         $("#price").html('￥' + totalprice);
     } else {
-        $(this).removeClass('male').addClass('empty');
+        $(this).removeClass('on').addClass('empty');
         totalprice -= price;
         vote_count --;
         $("#price").html('￥' + totalprice);

@@ -22,7 +22,7 @@
 						<p class="order-addr">{{{ $v['cinema']['name'] }}}</p>
 						<span class="film-detail">3排6座</span>
 						<p class="order-date">取票号：{{{ substr(md5(uniqid()),0,10) }}} 【密码：{{{ rand(10000, 100000) }}}】</p>
-						<p class="order-date">上映时间：{{{ $v['vote']['show_time'] }}}</p>
+						<p class="order-date">上映时间：{{{ date('Y/m/d H:i', strtotime($v['vote']['show_time'])) }}}</p>
 					</div>
 					<span class="mui-icon mui-icon-arrowright">
 
